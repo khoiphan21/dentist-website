@@ -1,0 +1,32 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/globalStyles';
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/images/homebg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: $fontContentB;
+    .main-container-background {
+        width: 100vw;
+        height: 100vh;
+        background: $transparent-white;
+        @include row-center();
+        padding: 0 15vw;
+        .main-container-content {
+            background: $transparent-white;
+            padding: 10vw 10vw;
+            .description {
+                line-height: 150%;
+            }
+        }
+    }
+}
+
+.title {
+    font-size: $fontTitleB;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}

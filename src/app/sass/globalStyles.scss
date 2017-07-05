@@ -1,0 +1,19 @@
+@import 'mixins';
+@import 'variables';
+
+/*
+/ button for family dentist
+*/
+
+@mixin button-fd-gold( $width: 10vw, $height: auto, $verticalPadding: 1.5vh, $horizontalPadding: 2vw, $padding: none, $font-size: 1vw) {
+    @include button( $width: $width, $height: $height, $verticalPadding: $verticalPadding, $horizontalPadding: $horizontalPadding, $padding: $padding, $background: transparent, $box-shadow: none, $color: black, $transition: 0.3s, $font-size: $font-size, $border: 2px solid $gold);
+    &:hover {
+        background: $light-gold;
+    }
+    @if $padding !=none {
+        padding: $padding;
+    }
+    @else {
+        padding: $verticalPadding $horizontalPadding;
+    }
+}

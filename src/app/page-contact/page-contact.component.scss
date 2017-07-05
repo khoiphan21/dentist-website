@@ -1,0 +1,112 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/globalStyles';
+.main-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/images/homebg.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: $fontContentB;
+    .main-container-background {
+        width: 100vw;
+        height: 100vh;
+        background: $transparent-white;
+        @include row-center();
+        padding: 0 15vw;
+        .main-container-content {
+            background: $transparent-white;
+            padding: 5vw 10vw;
+            .top-container {
+                .description {
+                    line-height: 150%;
+                }
+            }
+            .mid-container {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+                .mid-left-container {
+                    width: 43%;
+                    .bold {
+                        color: black;
+                        width: 7vw;
+                        vertical-align: text-top;
+                    }
+                }
+                .mid-right-container {
+                    width: 57%;
+                    input[type=text],
+                    select {
+                        box-sizing: border-box;
+                        @include column-center();
+                        padding: 0.5vh 1vw;
+                        text-align: left;
+                        height: 27px;
+                        width: 18.75vw;
+                        font-size: 12pt;
+                        margin-bottom: 1vh;
+                        border: none;
+                        background: rgba(255, 255, 255, 0.7);
+                    }
+                    input[type=textarea],
+                    select {
+                        box-sizing: border-box;
+                        @include column-center();
+                        padding: 0.5vh 1vw;
+                        text-align: left;
+                        height: 108px;
+                        width: 100%;
+                        font-size: 12pt;
+                        margin-bottom: 3px;
+                        border: none;
+                        background: rgba(255, 255, 255, 0.7);
+                    }
+                    .bold {
+                        color: black;
+                        width: 7vw;
+                        vertical-align: text-top;
+                    }
+                    .button {
+                        @include button-fd-gold($width: 8vw, $padding: 0.75vh 0.75vw);
+                        font-weight: 700;
+                        box-sizing: border-box;
+                        margin-top: 1vh;
+                        border-radius: 5px;
+                        margin-left: 63.5%;
+                    }
+                }
+                .tableTitle {
+                    font-size: $fontTitleS;
+                    margin-top: 5vh;
+                }
+                .tableTitle2 {
+                    font-size: $fontTitleS;
+                    margin-top: 3vh;
+                }
+                table {
+                    padding: 0;
+                    margin: 0;
+                    td {
+                        padding: 0;
+                        margin: 0;
+                        line-height: 150%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title {
+    font-size: $fontTitleB;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.smallerTitle {
+    font-size: $fontTitleS;
+    margin-bottom: 2vh;
+}

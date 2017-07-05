@@ -1,0 +1,73 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/globalStyles';
+.main-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85vw;
+    height: 100vh;
+    background: white;
+    z-index: 1;
+    padding: 5vh 7.5vw;
+    overflow-y: scroll;
+    .top-container {
+        width: 100%;
+    }
+    .team-intro-container {
+        margin-top: 4vh;
+        width: 100%;
+        @include column-center();
+        justify-content: flex-start;
+        align-items: flex-start;
+        .intro-content-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .content-left-container-doctor {
+                width: 45%;
+                height: 40vh;
+                background-image: url('/assets/images/doctor.jpg');
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .content-left-container-nurse {
+                width: 45%;
+                height: 40vh;
+                background-image: url('/assets/images/nurse.jpg');
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .content-right-container {
+                width: 52.5%;
+                line-height: 150%;
+            }
+        }
+    }
+}
+
+.description {
+    line-height: 150%;
+}
+
+.arrow {
+    position: absolute;
+    left: 2vw;
+    top: 40vh;
+    img {
+        width: 8vw;
+    }
+}
+
+.title {
+    font-size: $fontTitleB;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.smallerTitle {
+    font-size: $fontTitleS;
+    margin-bottom: 2vh;
+}
