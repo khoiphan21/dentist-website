@@ -11,7 +11,7 @@ import { PageTeamIntroComponent } from '../page-team-intro/page-team-intro.compo
 import { PageServiceIntroComponent } from '../page-service-intro/page-service-intro.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/team/intro', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: PageHomeComponent },
   { path: 'intro', component: PageTeamIntroComponent },
   {
