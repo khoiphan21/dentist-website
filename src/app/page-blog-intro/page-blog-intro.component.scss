@@ -1,0 +1,83 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/globalStyles';
+.main-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white;
+    z-index: 1;
+    overflow-y: scroll;
+    .top-container {
+        width: 100%;
+        padding: 0 1vw;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        height: 5vh;
+        border-bottom: rgba(100, 100, 100, 0.5) solid 1px;
+        .title {
+            margin: 0;
+            height: 100%;
+            @include row-center();
+        }
+        .search {
+            @include row-center();
+            height: 100%;
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .blog-intro-container {
+        padding: 0 5vw;
+        margin-top: 8vh;
+        width: 100%;
+        @include column-center();
+        justify-content: flex-start;
+        align-items: flex-start;
+        .intro-content-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            .content-left-container {
+                width: 46.5%;
+                height: 50vh;
+                background-image: url('/assets/images/blog.jpg');
+                background-position: top;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .content-right-container {
+                padding-bottom: 8vh;
+                @include column-center();
+                align-items: flex-start;
+                width: 46.5%;
+                line-height: 150%;
+                border-bottom: black solid 2px;
+                .date {
+                    margin-bottom: 2vh;
+                }
+            }
+        }
+    }
+}
+
+.description {
+    line-height: 150%;
+}
+
+.title {
+    font-size: $fontTitleB;
+    font-weight: 600;
+    margin-bottom: 2vh;
+}
+
+.smallerTitle {
+    font-size: $fontTitleS;
+    margin-bottom: 2vh;
+}

@@ -14,6 +14,9 @@ import { PageBlogComponent } from './page-blog/page-blog.component';
 import { PageContactComponent } from './page-contact/page-contact.component';
 import { PageTeamIntroComponent } from './page-team-intro/page-team-intro.component';
 import { PageServiceIntroComponent } from './page-service-intro/page-service-intro.component';
+import { PageBlogIntroComponent } from './page-blog-intro/page-blog-intro.component';
+import { PageLoginComponent } from './page-login/page-login.component';
+import { PageWelcomeComponent } from './page-welcome/page-welcome.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { PageServiceIntroComponent } from './page-service-intro/page-service-int
     PageBlogComponent,
     PageContactComponent,
     PageTeamIntroComponent,
-    PageServiceIntroComponent
+    PageServiceIntroComponent,
+    PageBlogIntroComponent,
+    PageLoginComponent,
+    PageWelcomeComponent
   ],
   imports: [
     BrowserModule,

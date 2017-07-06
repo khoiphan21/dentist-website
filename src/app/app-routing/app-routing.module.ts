@@ -9,25 +9,41 @@ import { PageBlogComponent } from '../page-blog/page-blog.component';
 import { PageContactComponent } from '../page-contact/page-contact.component';
 import { PageTeamIntroComponent } from '../page-team-intro/page-team-intro.component';
 import { PageServiceIntroComponent } from '../page-service-intro/page-service-intro.component';
+import { PageBlogIntroComponent } from '../page-blog-intro/page-blog-intro.component';
+import { PageLoginComponent } from '../page-login/page-login.component';
+import { PageWelcomeComponent } from '../page-welcome/page-welcome.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: PageHomeComponent },
-  { path: 'intro', component: PageTeamIntroComponent },
+  { path: '', redirectTo: '/welcome/home', pathMatch: 'full' },
   {
-    path: 'team', component: PageTeamComponent,
+    path: 'welcome', component: PageWelcomeComponent,
     children: [
+      { path: 'home', component: PageHomeComponent },
       { path: 'intro', component: PageTeamIntroComponent },
+      {
+        path: 'team', component: PageTeamComponent,
+        children: [
+          { path: 'intro', component: PageTeamIntroComponent },
+        ]
+      },
+      {
+        path: 'service', component: PageServiceComponent,
+        children: [
+          { path: 'intro', component: PageServiceIntroComponent },
+        ]
+      },
+      {
+        path: 'blog', component: PageBlogComponent,
+        children: [
+          { path: 'intro', component: PageBlogIntroComponent },
+        ]
+      },
+      { path: 'contact', component: PageContactComponent },
     ]
   },
-  {
-    path: 'service', component: PageServiceComponent,
-    children: [
-      { path: 'intro', component: PageServiceIntroComponent },
-    ]
-  },
-  { path: 'blog', component: PageBlogComponent },
-  { path: 'contact', component: PageContactComponent },
+  // { path: 'home', component: PageHomeComponent },
+
+  { path: 'admin', component: PageLoginComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: 'home' }
