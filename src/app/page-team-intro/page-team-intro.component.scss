@@ -8,7 +8,7 @@
     width: 85vw;
     height: 100vh;
     background: white;
-    z-index: 1;
+    z-index: 2;
     padding: 5vh 7.5vw;
     overflow-y: scroll;
     .top-container {
@@ -70,4 +70,8 @@
 .smallerTitle {
     font-size: $fontTitleS;
     margin-bottom: 2vh;
+}
+
+app-pagination {
+    display: none;
 }

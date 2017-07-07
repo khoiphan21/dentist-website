@@ -12,6 +12,7 @@ import { PageServiceIntroComponent } from '../page-service-intro/page-service-in
 import { PageBlogIntroComponent } from '../page-blog-intro/page-blog-intro.component';
 import { PageLoginComponent } from '../page-login/page-login.component';
 import { PageWelcomeComponent } from '../page-welcome/page-welcome.component';
+import { PageQMSComponent } from '../page-qms/page-qms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome/home', pathMatch: 'full' },
@@ -44,6 +45,7 @@ const routes: Routes = [
   // { path: 'home', component: PageHomeComponent },
 
   { path: 'admin', component: PageLoginComponent },
+  { path: 'QMS',component: PageQMSComponent },
 
   // otherwise redirect to home
   { path: '**', redirectTo: 'home' }
