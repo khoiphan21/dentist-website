@@ -14,6 +14,7 @@ import { PageLoginComponent } from '../page-login/page-login.component';
 import { PageWelcomeComponent } from '../page-welcome/page-welcome.component';
 import { PageQMSComponent } from '../page-qms/page-qms.component';
 import { PageQmsNewComponent } from '../page-qms-new/page-qms-new.component';
+import { PageQmsDraftComponent } from '../page-qms-draft/page-qms-draft.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome/home', pathMatch: 'full' },
@@ -50,6 +51,7 @@ const routes: Routes = [
     path: 'QMS', component: PageQMSComponent,
     children: [
       { path: 'new', component: PageQmsNewComponent },
+      { path: 'draft', component: PageQmsDraftComponent },
     ]
   },
 

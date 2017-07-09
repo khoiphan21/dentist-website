@@ -19,6 +19,7 @@ import { PageLoginComponent } from './page-login/page-login.component';
 import { PageWelcomeComponent } from './page-welcome/page-welcome.component';
 import { PageQMSComponent } from './page-qms/page-qms.component';
 import { PageQmsNewComponent } from './page-qms-new/page-qms-new.component';
+import { PageQmsDraftComponent } from './page-qms-draft/page-qms-draft.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PageQmsNewComponent } from './page-qms-new/page-qms-new.component';
     PageLoginComponent,
     PageWelcomeComponent,
     PageQMSComponent,
-    PageQmsNewComponent
+    PageQmsNewComponent,
+    PageQmsDraftComponent
   ],
   imports: [
     BrowserModule,

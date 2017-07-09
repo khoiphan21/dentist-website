@@ -1,0 +1,58 @@
+@import '../sass/variables';
+@import '../sass/mixins';
+@import '../sass/globalStyles';
+.main-container {
+    width: 85vw;
+    height: 100vh;
+    padding: 0 2vw;
+    @include row-center();
+    line-height: 150%;
+    color: black;
+    .main-container-content {
+        width: 100%;
+        height: 92%;
+        background: white;
+        border-radius: 5px;
+        @include column-center();
+        justify-content: flex-start;
+        .top-container {
+            width: 100%;
+            padding: 2vh 2vw;
+            border-bottom: $light-grey solid 1px;
+        }
+        .mid-container {
+            width: 90%;
+            height: 82%;
+            padding: 2vh 2vw;
+            margin-top: 4vh;
+            overflow-y: scroll;
+            @include column-center();
+            justify-content: flex-start;
+            .drafts {
+                width: 80%;
+                @include column-center();
+                justify-content: flex-start;
+                align-items: flex-start;
+                border-bottom: $light-grey solid 1px;
+                padding-bottom: 4vh;
+                margin-bottom: 3vh;
+            }
+            span:nth-child(3) {
+                margin-top: 2vh;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+.title {
+    font-size: $fontTitleB;
+    font-weight: 600;
+}
+
+.smallerTitle {
+    font-size: $fontTitleS;
+    font-weight: 600;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
