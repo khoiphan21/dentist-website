@@ -13,6 +13,7 @@ import { PageBlogIntroComponent } from '../page-blog-intro/page-blog-intro.compo
 import { PageLoginComponent } from '../page-login/page-login.component';
 import { PageWelcomeComponent } from '../page-welcome/page-welcome.component';
 import { PageQMSComponent } from '../page-qms/page-qms.component';
+import { PageQmsNewComponent } from '../page-qms-new/page-qms-new.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome/home', pathMatch: 'full' },
@@ -45,7 +46,12 @@ const routes: Routes = [
   // { path: 'home', component: PageHomeComponent },
 
   { path: 'admin', component: PageLoginComponent },
-  { path: 'QMS',component: PageQMSComponent },
+  {
+    path: 'QMS', component: PageQMSComponent,
+    children: [
+      { path: 'new', component: PageQmsNewComponent },
+    ]
+  },
 
   // otherwise redirect to home
   { path: '**', redirectTo: 'home' }

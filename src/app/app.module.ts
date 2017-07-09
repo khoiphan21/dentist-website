@@ -18,6 +18,7 @@ import { PageBlogIntroComponent } from './page-blog-intro/page-blog-intro.compon
 import { PageLoginComponent } from './page-login/page-login.component';
 import { PageWelcomeComponent } from './page-welcome/page-welcome.component';
 import { PageQMSComponent } from './page-qms/page-qms.component';
+import { PageQmsNewComponent } from './page-qms-new/page-qms-new.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { PageQMSComponent } from './page-qms/page-qms.component';
     PageBlogIntroComponent,
     PageLoginComponent,
     PageWelcomeComponent,
-    PageQMSComponent
+    PageQMSComponent,
+    PageQmsNewComponent
   ],
   imports: [
     BrowserModule,

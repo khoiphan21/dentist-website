@@ -5,6 +5,11 @@
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    .main-container-content {
+        width: 85%;
+        height: 100%;
+    }
     .side-bar {
         width: 15vw;
         height: 100%;
@@ -46,6 +51,7 @@
                 margin-left: 1vw;
             }
             article {
+                cursor: pointer;
                 @include row-center();
                 height: 3.5vh;
                 .icon {
@@ -57,14 +63,11 @@
                 }
             }
             .selected {
+                cursor: pointer;
                 box-sizing: border-box;
                 background: rgba(255, 255, 255, 0.1);
                 border-left: $turquoise solid 4px;
             }
         }
-    }
-    .main-container-content {
-        width: 85vw;
-        height: 100%;
     }
 }
