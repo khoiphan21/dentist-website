@@ -31,7 +31,7 @@
             overflow-y: scroll;
             @include column-center();
             justify-content: flex-start;
-            .drafts {
+            .trash {
                 width: 80%;
                 @include column-center();
                 justify-content: flex-start;

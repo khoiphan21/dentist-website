@@ -15,6 +15,9 @@ import { PageWelcomeComponent } from '../page-welcome/page-welcome.component';
 import { PageQMSComponent } from '../page-qms/page-qms.component';
 import { PageQmsNewComponent } from '../page-qms-new/page-qms-new.component';
 import { PageQmsDraftComponent } from '../page-qms-draft/page-qms-draft.component';
+import { PageQmsPublishedComponent } from '../page-qms-published/page-qms-published.component';
+import { PageQmsTrashComponent } from '../page-qms-trash/page-qms-trash.component';
+import { PageQmsScheduleComponent } from '../page-qms-schedule/page-qms-schedule.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/welcome/home', pathMatch: 'full' },
@@ -52,6 +55,9 @@ const routes: Routes = [
     children: [
       { path: 'new', component: PageQmsNewComponent },
       { path: 'draft', component: PageQmsDraftComponent },
+      { path: 'published', component: PageQmsPublishedComponent },
+      { path: 'schedule', component: PageQmsScheduleComponent },
+      { path: 'trash', component: PageQmsTrashComponent },
     ]
   },
 

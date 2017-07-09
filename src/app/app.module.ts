@@ -20,6 +20,9 @@ import { PageWelcomeComponent } from './page-welcome/page-welcome.component';
 import { PageQMSComponent } from './page-qms/page-qms.component';
 import { PageQmsNewComponent } from './page-qms-new/page-qms-new.component';
 import { PageQmsDraftComponent } from './page-qms-draft/page-qms-draft.component';
+import { PageQmsPublishedComponent } from './page-qms-published/page-qms-published.component';
+import { PageQmsTrashComponent } from './page-qms-trash/page-qms-trash.component';
+import { PageQmsScheduleComponent } from './page-qms-schedule/page-qms-schedule.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { PageQmsDraftComponent } from './page-qms-draft/page-qms-draft.component
     PageWelcomeComponent,
     PageQMSComponent,
     PageQmsNewComponent,
-    PageQmsDraftComponent
+    PageQmsDraftComponent,
+    PageQmsPublishedComponent,
+    PageQmsTrashComponent,
+    PageQmsScheduleComponent,
   ],
   imports: [
     BrowserModule,
