@@ -14,10 +14,14 @@
         height: 100vh;
         background: $transparent-white;
         @include row-center();
-        padding: 0 15vw;
+        // padding: 0 15vw;
         .main-container-content {
             background: $transparent-white;
-            padding: 10vw 10vw;
+            width: 100%;
+            height: 100%;
+            padding: 0 20vw;
+            @include column-center();
+            align-items: flex-start;
             .description {
                 line-height: 150%;
             }
@@ -34,6 +38,7 @@
 }
 
 .title {
+    font-family: 'Playfair Display';
     font-size: $fontTitleB;
     font-weight: 600;
     margin-bottom: 2vh;

@@ -9,6 +9,7 @@
     @include button( $width: $width, $height: $height, $verticalPadding: $verticalPadding, $horizontalPadding: $horizontalPadding, $padding: $padding, $background: transparent, $box-shadow: none, $color: black, $transition: 0.3s, $font-size: $font-size, $border: 2px solid $gold);
     &:hover {
         background: $light-gold;
+        border: transparent solid 2px;
     }
     @if $padding !=none {
         padding: $padding;

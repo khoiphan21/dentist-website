@@ -6,8 +6,9 @@
     @include column-center();
     @include transition-basic();
     .home {
+        height: 4vh;
         cursor: pointer;
-        width: 100%;
+        width: 80%;
         @include column-center();
         &:hover {
             .title {
@@ -19,8 +20,9 @@
         }
     }
     .team {
+        height: 4vh;
         cursor: pointer;
-        width: 100%;
+        width: 80%;
         @include column-center();
         &:hover {
             .title {
@@ -32,8 +34,9 @@
         }
     }
     .service {
+        height: 4vh;
         cursor: pointer;
-        width: 100%;
+        width: 80%;
         @include column-center();
         &:hover {
             .title {
@@ -45,8 +48,9 @@
         }
     }
     .blog {
+        height: 4vh;
         cursor: pointer;
-        width: 100%;
+        width: 80%;
         @include column-center();
         &:hover {
             .title {
@@ -58,8 +62,9 @@
         }
     }
     .contact {
+        height: 4vh;
         cursor: pointer;
-        width: 100%;
+        width: 80%;
         @include column-center();
         &:hover {
             .title {
@@ -72,22 +77,26 @@
     }
     img {
         width: 100%;
-        height: 5px;
+        height: 2px;
+    }
+    .title {
+        display: none;
+    }
+    .line {
+        display: block;
     }
     a {
         text-decoration: none;
         color: black;
-        text-transform: uppercase;
     }
 }
 
-.title {
-    display: none;
-    z-index: 0;
+.show {
+    .title {
+        font-weight: 700;
+        display: block !important;
+    }
+    .line {
+        display: none !important;
+    }
 }
-
-.line {
-    z-index: 1;
-}
-
-.show {}
