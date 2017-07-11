@@ -23,6 +23,7 @@ import { PageQmsDraftComponent } from './page-qms-draft/page-qms-draft.component
 import { PageQmsPublishedComponent } from './page-qms-published/page-qms-published.component';
 import { PageQmsTrashComponent } from './page-qms-trash/page-qms-trash.component';
 import { PageQmsScheduleComponent } from './page-qms-schedule/page-qms-schedule.component';
+import { MouseWheelDirective } from './mousewheel.directive';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { PageQmsScheduleComponent } from './page-qms-schedule/page-qms-schedule.
     PageQmsPublishedComponent,
     PageQmsTrashComponent,
     PageQmsScheduleComponent,
+    MouseWheelDirective
   ],
   imports: [
     BrowserModule,

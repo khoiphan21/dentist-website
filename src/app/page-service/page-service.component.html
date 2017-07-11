@@ -1,23 +1,24 @@
-<section class="main-container">
-    <section class="main-container-background">
-        <section class="main-container-content">
-            <section class="smallerTitle">
-                Our Service
-            </section>
-            <section class="title">
-                Lorem Ipsum Dolor Sit Amet, Consectetuer adipiscing elit, sed diam nomnummy nibh euismod.
+<section mouseWheel (mouseWheelUp)="mouseWheelUpFunc(event)" (mouseWheelDown)="mouseWheelDownFunc(event)">
+    <section class="main-container">
+        <section class="main-container-background">
+            <section class="main-container-content">
+                <section class="smallerTitle">
+                    Our Service
+                </section>
+                <section class="title">
+                    Lorem Ipsum Dolor Sit Amet, Consectetuer adipiscing elit, sed diam nomnummy nibh euismod.
 
-            </section>
-            <span class="description">
+                </section>
+                <span class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis urna vel elit lobortis, vel mattis orci eleifend. Aenean augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis urna vel elit lobortis, vel mattis orci eleifend. Aenean augue.
             </span>
-            <section class="button" routerLink="intro">
-                View Our Service &#10145;
+                <section class="button" routerLink="intro">
+                    View Our Service &#10145;
+                </section>
             </section>
         </section>
     </section>
 </section>
-
 <section>
     <router-outlet></router-outlet>
 </section>

@@ -1,5 +1,6 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
+import { Router} from '@angular/router';
 
 @Component({
   moduleId: module.id.toString(),
@@ -7,16 +8,24 @@ import { slideInDownAnimation } from '../animations';
   templateUrl: './page-home.component.html',
   styleUrls: ['./page-home.component.scss'],
   // make fade in animation available to this component
-  animations: [ slideInDownAnimation ]
+  animations: [slideInDownAnimation]
 })
 export class PageHomeComponent implements OnInit {
   @HostBinding('@slideInAnimation') routeAnimation = true;
-  @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
+  @HostBinding('style.display') display = 'block';
+  @HostBinding('style.position') position = 'absolute';
 
-  constructor() { }
+
+  constructor(public router: Router) { }
 
   ngOnInit() {
   }
 
+  // mouseWheelUpFunc() {
+  //   this.router.navigate(['/welcome/team']);
+  // }
+
+  mouseWheelDownFunc() {
+    this.router.navigate(['/welcome/team']);
+  }
 }
