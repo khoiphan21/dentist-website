@@ -47,10 +47,17 @@
 
 .arrow {
     position: absolute;
-    left: 2vw;
+    left: 3vw;
     top: 40vh;
-    img {
-        width: 8vw;
+    width: 8vw;
+    height: 7vw;
+    background-image: url('/assets/icons/arrow2.png');
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include transition-basic();
+    &:hover {
+        background-image: url('/assets/icons/arrow.png');
     }
 }
 
