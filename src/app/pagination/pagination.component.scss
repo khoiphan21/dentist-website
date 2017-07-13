@@ -2,6 +2,7 @@
 @import '../sass/mixins';
 @import '../sass/globalStyles';
 .main-container {
+    height: 20vh;
     width: 8vw;
     @include column-center();
     @include transition-basic();

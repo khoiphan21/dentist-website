@@ -2,6 +2,7 @@
 @import '../sass/mixins';
 @import '../sass/globalStyles';
 .main-container {
+    position: relative;
     width: 100vw;
     height: 100vh;
     background-image: url('/assets/images/homebg.jpg');
@@ -10,16 +11,20 @@
     background-repeat: no-repeat;
     font-size: $fontContentB;
     .main-container-background {
+        z-index: -1;
         background: $transparent-white;
         width: 100vw;
         height: 100vh;
         @include row-center();
-        // padding: 0 15vw;
+        .logo {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+        }
         .main-container-content {
             background: $transparent-white;
-            width: 100%;
+            width: 60vw;
             height: 100%;
-            padding: 0 20vw;
             @include column-center();
             align-items: flex-start;
             .description {
@@ -30,21 +35,19 @@
                 font-weight: 700;
                 box-sizing: border-box;
                 margin-top: 5vh;
-                margin-left: 35vw;
+                margin-left: auto;
                 font-size: $fontContentB;
             }
         }
+        .pagination {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+            @include row-center();
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
     }
-}
-
-.logo {
-    width: 15vh;
-    height: 15vh;
-    position: fixed;
-    top: 2vw;
-    left: 2vw;
-    z-index: 5;
-    background: black;
 }
 
 .title {

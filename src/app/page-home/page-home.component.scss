@@ -15,28 +15,30 @@
         background: $transparent-white;
         @include row-center();
         // padding: 0;
+        .logo {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+        }
         .main-container-content {
             background: $transparent-white;
-            width: 100%;
+            width: 60vw;
             height: 100%;
-            padding: 0 20vw;
             @include column-center();
             align-items: flex-start;
             .description {
                 line-height: 150%;
             }
         }
+        .pagination {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+            @include row-center();
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
     }
-}
-
-.logo {
-    width: 15vh;
-    height: 15vh;
-    position: fixed;
-    top: 2vw;
-    left: 2vw;
-    z-index: 5;
-    background: black;
 }
 
 .title {

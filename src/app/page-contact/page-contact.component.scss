@@ -15,11 +15,15 @@
         background: $transparent-white;
         @include row-center();
         // padding: 0 15vw;
+        .logo {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+        }
         .main-container-content {
             background: $transparent-white;
-            width: 100%;
+            width: 60vw;
             height: 100%;
-            padding: 0 20vw;
             @include column-center();
             align-items: flex-start;
             .top-container {
@@ -45,11 +49,10 @@
                     input[type=text],
                     select {
                         box-sizing: border-box;
-                        @include column-center();
                         padding: 0.5vh 1vw;
                         text-align: left;
                         height: 27px;
-                        width: 18.75vw;
+                        width: 22vw;
                         font-size: 12pt;
                         margin-bottom: 1vh;
                         border: none;
@@ -58,7 +61,6 @@
                     input[type=textarea],
                     select {
                         box-sizing: border-box;
-                        @include column-center();
                         padding: 0.5vh 1vw;
                         text-align: left;
                         height: 108px;
@@ -101,17 +103,15 @@
                 }
             }
         }
+        .pagination {
+            background: $transparent-white;
+            width: 20vw;
+            height: 100%;
+            @include row-center();
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
     }
-}
-
-.logo {
-    width: 15vh;
-    height: 15vh;
-    position: fixed;
-    top: 2vw;
-    left: 2vw;
-    z-index: 5;
-    background: black;
 }
 
 .title {

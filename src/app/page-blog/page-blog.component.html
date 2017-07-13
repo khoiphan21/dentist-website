@@ -1,7 +1,9 @@
 <section mouseWheel (mouseWheelUp)="mouseWheelUpFunc(event)" (mouseWheelDown)="mouseWheelDownFunc(event)">
-    <div class="logo">das</div>
     <section class="main-container">
         <section class="main-container-background">
+            <section class="logo">
+
+            </section>
             <section class="main-container-content">
                 <section class="smallerTitle">
                     Latest On The Blog
@@ -11,10 +13,13 @@
                 </section>
                 <span class="description">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis urna vel elit lobortis, vel mattis orci eleifend. Aenean augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum venenatis urna vel elit lobortis, vel mattis orci eleifend. Aenean augue.
-            </span>
+                </span>
                 <section class="button" routerLink="intro">
                     Read More &#10145;
                 </section>
+            </section>
+            <section class="pagination">
+                <app-pagination></app-pagination>
             </section>
         </section>
     </section>
