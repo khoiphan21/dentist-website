@@ -1,5 +1,5 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
-import { slideInDownAnimation } from '../animations';
+import { Component, OnInit, HostBinding, trigger } from '@angular/core';
+import { slideInDownAnimation, fadeInAnimation } from '../animations';
 import { Router } from '@angular/router';
 
 @Component({
