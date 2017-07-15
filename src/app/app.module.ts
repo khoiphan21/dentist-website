@@ -24,6 +24,7 @@ import { PageQmsPublishedComponent } from './page-qms-published/page-qms-publish
 import { PageQmsTrashComponent } from './page-qms-trash/page-qms-trash.component';
 import { PageQmsScheduleComponent } from './page-qms-schedule/page-qms-schedule.component';
 import { MouseWheelDirective } from './mousewheel.directive';
+import { NavigationService } from './services/navigation.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,9 @@ import { MouseWheelDirective } from './mousewheel.directive';
     AppRoutingModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    NavigationService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

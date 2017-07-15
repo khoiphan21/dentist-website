@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding, HostListener } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
 import { Router} from '@angular/router';
+import { NavigationService } from '../services/navigation.service';
 
 @Component({
   moduleId: module.id.toString(),
@@ -16,16 +17,24 @@ export class PageHomeComponent implements OnInit {
   @HostBinding('style.position') position = 'absolute';
 
 
-  constructor(public router: Router) { }
+  constructor(
+    private router: Router,
+    private navigationService: NavigationService
+  ) { }
+
+  isNavigating: boolean = false;
 
   ngOnInit() {
   }
 
-  // mouseWheelUpFunc() {
-  //   this.router.navigate(['/welcome/team']);
-  // }
-
   mouseWheelDownFunc() {
-    this.router.navigate(['/welcome/team']);
+    this.slowlyNavigate('/welcome/team')
+  }
+
+  slowlyNavigate(link: string) {
+    if (!this.navigationService.isNavigationReady()) {
+      this.router.navigate([link]);
+      this.navigationService.navigate();
+    }
   }
 }

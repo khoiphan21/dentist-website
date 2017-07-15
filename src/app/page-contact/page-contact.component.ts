@@ -1,6 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { slideInDownAnimation } from '../animations';
 import { Router } from '@angular/router';
+import { query } from '@angular/animations'
+import { NavigationService } from '../services/navigation.service';
 @Component({
   selector: 'app-page-contact',
   templateUrl: './page-contact.component.html',
@@ -11,13 +13,25 @@ export class PageContactComponent implements OnInit {
   @HostBinding('@slideInAnimation') routeAnimation = true;
   @HostBinding('style.display')   display = 'block';
   @HostBinding('style.position')  position = 'absolute';
-  constructor(public router: Router) { }
+  constructor(
+    private router: Router,
+    private navigationService: NavigationService
+  ) { }
+
+  isNavigating: boolean = false;
 
   ngOnInit() {
   }
 
   mouseWheelUpFunc() {
-    this.router.navigate(['/welcome/blog']);
+    this.slowlyNavigate('/welcome/blog');
+  }
+
+  slowlyNavigate(link: string) {
+    if (!this.navigationService.isNavigationReady()) {
+      this.router.navigate([link]);
+      this.navigationService.navigate();
+    }
   }
 
 }
