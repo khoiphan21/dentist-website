@@ -6,6 +6,7 @@ export class MouseWheelDirective {
   @Output() mouseWheelDown = new EventEmitter();
 
   @HostListener('mousewheel', ['$event']) onMouseWheelChrome(event: any) {
+    console.log(`${event.wheelDelta}`)
     this.mouseWheelFunc(event);
   }
 
@@ -28,8 +29,8 @@ export class MouseWheelDirective {
     // for IE
     event.returnValue = false;
     // for Chrome and Firefox
-    if(event.preventDefault) {
+    // if(event.preventDefault) {
         event.preventDefault();
-    }
+    // }
   }
 }

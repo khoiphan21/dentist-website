@@ -1,19 +1,26 @@
-import { Injectable } from '@angular/core';
+import { Injectable, transition } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable()
 export class NavigationService {
-  isNavigating: boolean = false;
+  private isNavigating: boolean = false;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
-  isNavigationReady(): boolean {
+  isNavigationBusy(): boolean {
     return this.isNavigating;
   }
 
-  navigate() {
-    this.isNavigating = true;
-    setTimeout(() => {
-      this.isNavigating = false;
-    }, 1500)
+  navigateSlowly(link: string, transition: string) {
+    if (!this.isNavigating){
+      this.router.navigate([link, {transition: transition}])
+      this.isNavigating = true;
+      setTimeout(() => {
+        this.isNavigating = false;
+      }, 1000)
+    }
   }
 }

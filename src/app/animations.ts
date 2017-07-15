@@ -1,40 +1,71 @@
 import { animate, AnimationEntryMetadata, state, style, transition, trigger } from '@angular/core';
 
 // Component transition animations
-export const slideInDownAnimation: AnimationEntryMetadata =
-  trigger('slideInAnimation', [
-    state('*',
-      style({
-        opacity: 1,
-        transform: 'translateX(0)'
-      })
-    ),
-    transition(':enter', [
-      style({
-        opacity: 0,
-        transform: 'translateY(-100%)'
-      }),
-      animate('0.5s ease-in')
-    ]),
-    transition(':leave', [
-      animate('0.5s ease-out', style({
-        opacity: 0,
-        transform: 'translateY(100%)'
-      }))
-    ])
-  ]);
+export const slideAnimation: AnimationEntryMetadata =
+    trigger('transition', [
+        state('slideoutdown',
+            style({
+                opacity: 0,
+                transform: 'translateY(100%)'
+            })
+        ),
+        state('slideoutup',
+            style({
+                opacity: 0,
+                transform: 'translateY(-100%)'
+            })
+        ),
+        transition('* => slideup', [
+            style({
+                opacity: 1,
+                transform: 'translateY(100%)' // Start from being translated 100% down, to 0%
+            }),
+            animate('0.5s ease-in')
+        ]),
+        transition('* => slidedown', [
+            style({
+                opacity: 1,
+                transform: 'translateY(-100%)'
+            }),
+            animate('0.5s ease-in')
+        ]),
+    ]);
 
-  export const fadeInAnimation: AnimationEntryMetadata =
+// Component transition animations
+export const slideInUpAnimation: AnimationEntryMetadata =
+    trigger('slideUpAnimation', [
+        state('active',
+            style({
+                opacity: 1,
+                transform: 'translateX(0)'
+            })
+        ),
+        transition(':enter', [
+            style({
+                opacity: 0,
+                transform: 'translateY(100%)'
+            }),
+            animate('0.5s ease-in')
+        ]),
+        transition(':leave', [
+            animate('0.5s ease-out', style({
+                opacity: 0,
+                transform: 'translateY(-100%)'
+            }))
+        ])
+    ]);
+
+export const fadeInAnimation: AnimationEntryMetadata =
     trigger('fadeInAnimation', [
         // route 'enter' transition
         transition(':enter', [
             // styles at start of transition
-            style({ 
+            style({
                 opacity: 0
             }),
             // animation and styles at end of transition
-            animate('.3s', style({ 
-                opacity: 1 
+            animate('.3s', style({
+                opacity: 1
             }))
         ]),
     ]);
